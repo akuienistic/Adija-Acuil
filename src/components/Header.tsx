@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/about", label: "About", icon: User },
   { to: "/contact", label: "Contact", icon: Mail },
   { to: "/subscribe", label: "Subscribe", icon: Bell },
+  { to: "/admin", label: "Sign in", icon: LogIn },
 ];
 
 export default function Header() {
@@ -32,7 +33,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 flex-1 justify-center">
-            {navLinks.map((link) => (
+            {navLinks.filter(link => link.to !== '/admin').map((link) => (
               <Link
                 key={link.to}
                 to={link.to}

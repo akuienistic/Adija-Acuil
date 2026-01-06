@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Lock, User, Eye, EyeOff } from "lucide-react";
 import { isAdminAuthenticated, setAdminAuth, ADMIN_USERNAME, ADMIN_PASSWORD } from "@/data/cartoons";
 import { useToast } from "@/hooks/use-toast";
@@ -44,17 +44,19 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 bg-muted">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen relative py-12 px-4 bg-muted">
+      <Link to="/" className="absolute top-10 left-4 text-sm text-muted-foreground hover:text-primary transition-colors">
+        ← Back to Home
+      </Link>
+      <div className="flex items-center justify-center min-h-full">
+        <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+          <div className="w-16 h-16 mx-auto mb-4 mt-40 bg-primary rounded-full flex items-center justify-center">
             <Lock size={28} className="text-primary-foreground" />
           </div>
           <h1 className="font-heading text-3xl text-primary">Admin Login</h1>
-          <p className="text-muted-foreground mt-2">
-            Sign in to manage your cartoons
-          </p>
+          <p className="text-muted-foreground mt-2">Sign in to manage your cartoons</p>
         </div>
 
         {/* Login Form */}
@@ -65,10 +67,7 @@ export default function AdminLogin() {
                 Username
               </label>
               <div className="relative">
-                <User
-                  size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
-                />
+                <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" />
                 <input
                   type="text"
                   id="username"
@@ -86,10 +85,7 @@ export default function AdminLogin() {
                 Password
               </label>
               <div className="relative">
-                <Lock
-                  size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
-                />
+                <Lock size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" />
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
@@ -133,8 +129,9 @@ export default function AdminLogin() {
             <br />
             Username: <code className="bg-muted px-2 py-0.5 rounded">admin</code>
             <br />
-            Password: <code className="bg-muted px-2 py-0.5 rounded">adija2024</code>
+            Password: <code className="bg-muted px-2 py-0.5 rounded">adija2026</code>
           </p>
+        </div>
         </div>
       </div>
     </div>

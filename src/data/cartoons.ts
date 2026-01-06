@@ -161,4 +161,4 @@ export function setAdminAuth(authenticated: boolean): void {
 
 // Simple admin credentials (for demo purposes)
 export const ADMIN_USERNAME = "admin";
-export const ADMIN_PASSWORD = "adija2024";
+export const ADMIN_PASSWORD = "adija2026";

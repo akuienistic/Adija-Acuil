@@ -74,14 +74,11 @@ export default function Footer() {
               href="https://wa.me/251988499136"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary transition-colors"
+              className="text-secondary transition-colors font-semibold"
             >
               Simon A. Atem
             </a>
           </p>
-          <Link to="/admin" className="text-primary-foreground/80 hover:text-secondary transition-colors text-sm">
-            Admin
-          </Link>
         </div>
       </div>
     </footer>

@@ -43,7 +43,7 @@ export default function Index() {
                   Explore Gallery
                   <ArrowRight size={20} />
                 </Link>
-                <Link to="/about" className="btn-secondary-hero inline-flex items-center justify-center">
+                <Link to="/about" className="btn-secondary-hero inline-flex items-center justify-center hover:bg-primary/90 hover:border-white/90">
                   About Adija
                 </Link>
               </div>
@@ -125,10 +125,9 @@ export default function Index() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/subscribe" className="btn-hero bg-card text-accent hover:bg-card/90 text-center">
-                ​Subscribe Now  
+                Subscribe Now  
               </Link>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="btn-secondary-hero border-accent-foreground text-accent">
-                <Facebook size={20} className="mr-2" />
                 Follow on Facebook
               </a>
             </div>
